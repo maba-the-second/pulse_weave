@@ -1,0 +1,18 @@
+// ============================================================
+// Home.jsx — Landing Page for Pulse Weave
+//
+// Sections:
+//   1. HeroSection       — Full-viewport hero with 3D placeholder,
+//                          animated tagline, and scroll CTA
+//   2. ManifestoSection  — Brand manifesto with scroll-reveal text
+//   3. ProductShowcase   — 3 flagship products in a grid
+//   4. StatsSection      — Animated tech/brand statistics
+//   5. TechBanner        — Scrolling marquee of tech keywords
+//
+// Techniques used:
+//   • useInView (Framer Motion) — triggers animation when element
+//     enters the viewport (lazy/scroll-reveal pattern)
+//   • useRef — connects DOM elements to Framer Motion's observer
+//   • variants — reusable animation state objects for cleanliness
+//   • staggerChildren — parent orchestrates child animation timing
+// ============================================================

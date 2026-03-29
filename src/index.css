@@ -1,0 +1,72 @@
+/* ============================================================
+   index.css — Global Styles for Pulse Weave (Light Theme)
+   ============================================================ */
+
+@import "tailwindcss";
+
+/* ── Google Fonts ──────────────────────────────────────────── */
+@import url("https://db.onlinewebfonts.com/c/d7a74ed36ff0603a3e41b6da32c47f03?family=Ndot+57+Aligned");
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap");
+
+/* ── Design Tokens ─────────────────────────────────────────
+   PALETTE:
+     --color-silver:    #C0C0C0  metallic mid-tone
+     --color-steel:     #8A9BB0  cool steel accent
+     --color-graphite:  #4A5568  dark gray for labels / secondary text
+     --color-ink:       #1A202C  near-black for primary text / headings
+   All can be used as text-silver, bg-steel, border-graphite, etc.
+────────────────────────────────────────────────────────────── */
+@theme {
+  --font-major: "Ndot 57 Aligned", sans-serif;
+  --font-news: "Newsreader", serif;
+
+  --color-silver: #C0C0C0;
+  --color-steel: #8A9BB0;
+  --color-graphite: #4A5568;
+  --color-ink: #1A202C;
+}
+
+/* ── Base Layer ────────────────────────────────────────────── */
+@layer base {
+
+  html,
+  body,
+  #root {
+    /* Metallic silver-white base — warm off-white with a chrome tint */
+    background-color: #F0F2F5;
+    color: #1A202C;
+    min-height: 100vh;
+    font-family: "Newsreader", serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* All headings → Ndot 57 Aligned */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-major);
+    font-style: normal;
+    color: #1A202C;
+  }
+
+  /* Hero banner spans use data-heading since they're motion.span not h-tags */
+  [data-heading] {
+    font-family: var(--font-major);
+    font-style: normal;
+  }
+}
