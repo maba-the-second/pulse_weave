@@ -195,7 +195,8 @@ function Footer() {
 export default function App() {
   return (
     <BrowserRouter basename="/pulse_weave/">
-      <div className="min-h-screen bg-black text-white flex flex-col font-news">
+      {/* Root wrapper: light metallic background */}
+      <div className="min-h-screen bg-[#F0F2F5] text-ink flex flex-col font-news">
         <Navbar />
         <main className="flex-1 pt-16">
           <AnimatedRoutes />
